@@ -1,22 +1,31 @@
 import React from "react";
-import Unity, { UnityContext } from "react-unity-webgl";
-
-const unityContext = new UnityContext({
-  loaderUrl: "/UnityTest/public_html/Build/WEBGL TEST.loader.js",
-  dataUrl: "/UnityTest/public_html/Build/WEBGL TEST.data",
-  frameworkUrl: "/UnityTest/public_html/Build/WEBGL TEST.framework.js",
-  codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm",
-});
+import { Router } from "@reach/router";
+import HomePage from "/pages/HomePage";
 
 function App() {
-  /*function spawnEnemies() {
+    /*function spawnEnemies() {
     unityContext.send("GameController", "SpawnEnemies", 100);
   }
 */
-  return (
-    <div>
+    return (
+        <Router>
+            <HomePage path="/" />
+        </Router>
+
+        /*<div>
       <Unity unityContext={unityContext} />
-    </div>
-  );
+    </div>*/
+    );
 }
 export default App;
+
+/* return (
+        <div className="App">
+            <Router>
+                <HomePage path="/" />
+                <ApodPage path="/apod-page" />
+                <NotFound default />
+            </Router>
+        </div>
+    );
+    */
