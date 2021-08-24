@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Unity, { UnityContext } from "react-unity-webgl";
+
+const unityContext = new UnityContext({
+  loaderUrl: "/UnityTest/public_html/Build/WEBGL TEST.loader.js",
+  dataUrl: "/UnityTest/public_html/Build/WEBGL TEST.data",
+  frameworkUrl: "/UnityTest/public_html/Build/WEBGL TEST.framework.js",
+  codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm",
+});
 
 function App() {
+  /*function spawnEnemies() {
+    unityContext.send("GameController", "SpawnEnemies", 100);
+  }
+*/
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Unity unityContext={unityContext} />
     </div>
   );
 }
-
 export default App;
