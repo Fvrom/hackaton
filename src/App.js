@@ -1,18 +1,15 @@
 import React from "react";
 import { Router } from "@reach/router";
-<<<<<<< HEAD
+
 import HomePage from "../src/pages/HomePage";
 // import Unity, { UnityContext } from "react-unity-webgl";
-=======
-import HomePage from "/pages/HomePage";
->>>>>>> d54238456c00bb439e832be4dd3a8ffcad558be5
 
 function App() {
-    /*function spawnEnemies() {
+  /*function spawnEnemies() {
     unityContext.send("GameController", "SpawnEnemies", 100);
   }
 */
-<<<<<<< HEAD
+
   return (
     <Router>
       <HomePage path="/" />
@@ -23,7 +20,7 @@ function App() {
       <Unity unityContext={unityContext} />
     </div>*/
   );
-=======
+  /* 
     return (
         <Router>
             <HomePage path="/" />
@@ -32,8 +29,6 @@ function App() {
         /*<div>
       <Unity unityContext={unityContext} />
     </div>*/
-    );
->>>>>>> d54238456c00bb439e832be4dd3a8ffcad558be5
 }
 export default App;
 
