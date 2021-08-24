@@ -1,12 +1,7 @@
 import React from "react";
-import Unity, { UnityContext } from "react-unity-webgl";
-
-const unityContext = new UnityContext({
-  loaderUrl: "/UnityTest/public_html/Build/WEBGL TEST.loader.js",
-  dataUrl: "/UnityTest/public_html/Build/WEBGL TEST.data",
-  frameworkUrl: "/UnityTest/public_html/Build/WEBGL TEST.framework.js",
-  codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm",
-});
+import { Router } from "@reach/router";
+import HomePage from "../src/pages/HomePage";
+// import Unity, { UnityContext } from "react-unity-webgl";
 
 function App() {
   /*function spawnEnemies() {
@@ -14,9 +9,14 @@ function App() {
   }
 */
   return (
-    <div>
+    <Router>
+      <HomePage path="/" />
+      {/* <AboutPage path="/about" /> */}
+      {/* <NotFound default /> */}
+    </Router>
+    /*<div>
       <Unity unityContext={unityContext} />
-    </div>
+    </div>*/
   );
 }
 export default App;
