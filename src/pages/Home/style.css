@@ -6,7 +6,7 @@
 .unity_canvas {
   display: flex;
   justify-content: center;
-  width: 960px;
+  width: 1040px;
   height: 600px;
   background: white;
 }
