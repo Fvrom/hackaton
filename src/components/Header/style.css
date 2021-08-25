@@ -1,0 +1,24 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 2rem;
+  padding: 0;
+  height: 5rem;
+}
+
+li {
+  text-decoration: none;
+  font-size: 1.6rem;
+  margin: 1rem;
+}
+li a {
+  text-decoration: none;
+  color: black;
+}

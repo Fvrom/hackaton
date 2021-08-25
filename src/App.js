@@ -1,34 +1,21 @@
 import React from "react";
-import { Router } from "@reach/router";
-
-import HomePage from "../src/pages/HomePage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AboutPage from "./pages/About";
+import HomePage from "./pages/Home/HomePage";
 // import Unity, { UnityContext } from "react-unity-webgl";
 
 function App() {
-  /*function spawnEnemies() {
-    unityContext.send("GameController", "SpawnEnemies", 100);
-  }
-*/
-
   return (
     <Router>
-      <HomePage path="/" />
-      {/* <AboutPage path="/about" /> */}
-      {/* <NotFound default /> */}
+      <Switch>
+        <Route exact path="/about" component={AboutPage} />
+        <Route exact path="/" component={HomePage} />
+      </Switch>
     </Router>
     /*<div>
       <Unity unityContext={unityContext} />
     </div>*/
   );
-  /* 
-    return (
-        <Router>
-            <HomePage path="/" />
-        </Router>
-
-        /*<div>
-      <Unity unityContext={unityContext} />
-    </div>*/
 }
 export default App;
 

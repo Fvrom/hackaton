@@ -1,0 +1,12 @@
+.canvas_wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.unity_canvas {
+  display: flex;
+  justify-content: center;
+  width: 960px;
+  height: 600px;
+  background: white;
+}
