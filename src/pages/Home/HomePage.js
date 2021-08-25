@@ -5,10 +5,15 @@ import "./style.css";
 
 const HomePage = () => {
   const unityContext = new UnityContext({
+    /*
     loaderUrl: "/UnityTest/public_html/Build/WEBGL TEST.loader.js",
     dataUrl: "/UnityTest/public_html/Build/WEBGL TEST.data",
     frameworkUrl: "/UnityTest/public_html/Build/WEBGL TEST.framework.js",
-    codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm",
+    codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm", */
+    loaderUrl: "/UnityBuild/Build/UnityBuild.loader.js",
+    dataUrl: "/UnityBuild/Build/UnityBuild.data",
+    frameworkUrl: "/UnityBuild/Build/UnityBuild.framework.js",
+    codeUrl: "/UnityBuild/Build/UnityBuild.wasm",
 
     companyName: "Omnick",
     productName: "HackatonHT2021",
