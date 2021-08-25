@@ -26,12 +26,16 @@ const HomePage = () => {
   /*
 för inladdning 
 */
+  /*
   const [isLoaded, setIsLoaded] = React.useState(false);
 
-  React.useEffect(() => {
-    unityContext.on("loaded", () => setIsLoaded(true));
-  }, []);
-
+  React.useEffect(function () {
+    unityContext.on("loaded", function () {
+      setIsLoaded(true);
+       style={{ visibility: isLoaded ? "visable" : "hidden" }}
+    });
+  });
+ */
   return (
     <>
       <Header> </Header>
