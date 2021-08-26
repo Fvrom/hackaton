@@ -12,8 +12,15 @@
   align-items: center;
 }
 
-.collab-wrapper img {
-  width: 16rem;
+.collab-text {
+  max-width: 1000px;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+#line {
+  min-width: max-content;
+  max-width: 1600px;
   margin-bottom: 3rem;
 }
 
@@ -26,13 +33,16 @@
 #x {
   font-size: 3rem;
   font-family: "Roboto Regular";
+  /* font-weight: 200; */
 }
 
 #yrgo-logo {
-  width: 400px;
+  min-width: 10rem;
 }
 
 #rm-logo {
-  width: 730px;
+  /* width: 730px; */
+  min-width: 10rem;
+  max-width: 70rem;
   height: auto;
 }

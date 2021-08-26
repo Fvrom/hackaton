@@ -11,21 +11,29 @@ import Robin from "../../assets/Robin.svg";
 import line from "../../assets/line.png";
 
 import yrgo from "../../assets/yrgologga-sv.png";
-import rm from "../../assets/rmlogga.png";
-
+import rm from "../../assets/rmlogoofc.png";
+// blev något knas i git pull hoppas inget förstördes för dig
 const AboutPage = () => {
   return (
     <>
       <section className="collab-wrapper">
-        <img src={line} alt="start av Om Oss-sektionen" />
-
+        <img src={line} id="line" alt="start av Om Oss-sektionen" />
+        
         <div className="logos">
           <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
-          <p id="x">x</p>
+          <p id="x">&</p>
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
-
-        <p>Mer text som förklarar att samt varför vi byggt detta?</p>
+        <div className="collab-text">
+          <p>
+            I år 2021 upplaga av YRGOs årliga tävling Sammanslaget samarbetade
+            utbildningarna Game Programmer, Game Artist, Manusförfattare,
+            Webbutvecklare och UX Designer för att skapa en 'interaktiv digital
+            berättelse åt kunden Räddningsmissionen. Nedan kan ni läsa om de
+            studenter som står bakom detta bidrag samt hur ni kan se mer av
+            deras arbete och kontaktuppgifter
+          </p>
+        </div>
       </section>
       <section className="about-page">
         <Card
