@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import AboutPage from "./pages/About";
+import AboutPage from "./pages/About/About";
 import HomePage from "./pages/Home/HomePage";
 // import Unity, { UnityContext } from "react-unity-webgl";
 
