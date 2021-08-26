@@ -1,39 +1,84 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
-import Header from "../../components/Header/Header";
+//import Header from "../../components/Header/Header";
+import Ability from "../../components/Ability/Ability";
+
+import { motion } from "framer-motion";
 import "./style.css";
 
 const HomePage = () => {
   const unityContext = new UnityContext({
-    loaderUrl: "/UnityTest/public_html/Build/WEBGL TEST.loader.js",
-    dataUrl: "/UnityTest/public_html/Build/WEBGL TEST.data",
-    frameworkUrl: "/UnityTest/public_html/Build/WEBGL TEST.framework.js",
-    codeUrl: "/UnityTest/public_html/Build/WEBGL TEST.wasm",
-
+    loaderUrl: "/UnityTest/Build/UnityBuild.loader.js",
+    dataUrl: "/UnityTest/Build/UnityBuild.data",
+    frameworkUrl: "/UnityTest/Build/UnityBuild.framework.js",
+    codeUrl: "/UnityTest/Build/UnityBuild.wasm",
     companyName: "Omnick",
     productName: "HackatonHT2021",
     productVersion: "1.0",
   });
 
-  function ChangeName() {
-    unityContext.send("Sphere", "ChangeName", "Robin");
-  }
-  /*
-för inladdning 
-*/
-  const [isLoaded, setIsLoaded] = React.useState(false);
+  //function on(eventName: "loaded", eventListener: () => void): void;
 
-  React.useEffect(() => {
-    unityContext.on("loaded", () => setIsLoaded(true));
+  /* function ChangeName() {
+
+unityContext.send("Sphere", "ChangeName", "Robin");
+
+}*/
+
+  /*
+
+för inladdning
+
+- /
+
+/*
+
+
+
+*/
+
+  const [progression, setProgression] = useState(0);
+
+  useEffect(function () {
+    unityContext.on("progress", function (progression) {
+      setTimeout(() => {
+        setProgression(progression);
+      }, 2000);
+    });
   }, []);
+
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(function () {
+    unityContext.on("loaded", function () {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 3000);
+    });
+  });
 
   return (
     <>
-      <Header> </Header>
-      <div className="canvas_wrapper">
-        <button onChange={ChangeName}>Change name! </button>
-        <Unity className="unity_canvas" unityContext={unityContext} />
+      <div
+        className="loading_wrapper"
+        style={{ visibility: isLoaded ? "hidden" : "visible" }}
+      >
+        <motion.div transition={{ ease: "easeOut", duration: 2 }}>
+          <p style={{ visibility: progression ? "hidden" : "visible" }}>
+            Loading ...
+          </p>
+        </motion.div>
       </div>
+
+      <div className="canvas_wrapper">
+        <motion.div transition={{ ease: "easeIn", duration: 2 }}>
+          <Unity className="unity_canvas" unityContext={unityContext} />
+        </motion.div>
+      </div>
+      <Ability
+        title={"Ability-programmet"}
+        paragraf={"En möjlighet när alla andra dörrar stängs"}
+      ></Ability>
     </>
   );
 };
