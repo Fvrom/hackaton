@@ -45,7 +45,7 @@ för inladdning
         setProgression(progression);
       }, 2000);
     });
-  }, []);
+  });
 
   const [isLoaded, setIsLoaded] = useState(false);
 
