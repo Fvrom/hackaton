@@ -8,10 +8,10 @@ import "./style.css";
 
 const HomePage = () => {
   const unityContext = new UnityContext({
-    loaderUrl: "/UnityTest/Build/UnityBuild.loader.js",
-    dataUrl: "/UnityTest/Build/UnityBuild.data",
-    frameworkUrl: "/UnityTest/Build/UnityBuild.framework.js",
-    codeUrl: "/UnityTest/Build/UnityBuild.wasm",
+    loaderUrl: "/UnityBuild/Build/UnityBuild.loader.js",
+    dataUrl: "/UnityBuild/Build/UnityBuild.data",
+    frameworkUrl: "/UnityBuild/Build/UnityBuild.framework.js",
+    codeUrl: "/UnityBuild/Build/UnityBuild.wasm",
     companyName: "Omnick",
     productName: "HackatonHT2021",
     productVersion: "1.0",
