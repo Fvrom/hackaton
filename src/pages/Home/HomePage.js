@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 //import Header from "../../components/Header/Header";
 import Ability from "../../components/Ability/Ability";
+import AboutPage from "../About/About";
 
 import { motion } from "framer-motion";
 import "./style.css";
@@ -79,6 +80,7 @@ för inladdning
         title={"Ability-programmet"}
         paragraf={"En möjlighet när alla andra dörrar stängs"}
       ></Ability>
+      <AboutPage> </AboutPage>
     </>
   );
 };

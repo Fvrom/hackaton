@@ -13,7 +13,6 @@ import Robin from "../../assets/Robin.svg";
 const AboutPage = () => {
   return (
     <>
-      <Header></Header>
       <section className="about-page">
         <Card
           image={Sandra}
