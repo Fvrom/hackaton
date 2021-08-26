@@ -11,7 +11,7 @@ const Card = (props) => {
           <h3>{props.title}</h3>
           <p>{props.text}</p>
           {/* mailto:   */}
-          <a href="mailto:{props.email}">Kontakta mig</a>
+          {/* <a href="mailto:{props.email}">Kontakta mig</a> */}
         </div>
       </article>
     </section>

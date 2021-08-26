@@ -9,10 +9,24 @@ import Ida from "../../assets/Ida.svg";
 import Mia from "../../assets/Mia.svg";
 import Moa from "../../assets/Moa.svg";
 import Robin from "../../assets/Robin.svg";
+import line from "../../assets/line.png";
+import yrgo from "../../assets/yrgologga.svg";
+import rm from "../../assets/rmlogga.png";
 
 const AboutPage = () => {
   return (
     <>
+      <section className="collab-wrapper">
+        <img src={line}></img>
+
+        <div className="logos">
+          <img src={yrgo} id="yrgo-logo"></img>
+          <p>x</p> 
+          <img src={rm} id="rm-logo"></img>
+        </div>
+        
+        <p>Mer text som förklarar att samt varför vi byggt detta?</p>
+      </section>
       <section className="about-page">
         <Card
           image={Sandra}
