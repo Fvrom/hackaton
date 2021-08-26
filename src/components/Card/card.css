@@ -16,7 +16,7 @@
 }
 
 .card {
-  width: 350px;
+  width: 400px;
   /* height: 400px; */
   background-color: white;
   color: black;
@@ -34,6 +34,7 @@
   flex-direction: column;
   height: 100%;
   font-family: "Roboto Regular";
+  line-height: 22px;
 }
 
 /* .card-content href {
