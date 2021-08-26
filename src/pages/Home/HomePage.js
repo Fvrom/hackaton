@@ -5,6 +5,7 @@ import Ability from "../../components/Ability/Ability";
 import AboutPage from "../About/About";
 
 import { motion } from "framer-motion";
+import Heart from "../../assets/Heart.svg";
 import "./style.css";
 
 const HomePage = () => {
@@ -64,7 +65,7 @@ för inladdning
         className="loading_wrapper"
         style={{ visibility: isLoaded ? "hidden" : "visible" }}
       >
-        <motion.div transition={{ ease: "easeOut", duration: 2 }}>
+        <motion.div transition={{ ease: "easeOut", duration: 1 }}>
           <p style={{ visibility: progression ? "hidden" : "visible" }}>
             Loading ...
           </p>
@@ -79,6 +80,8 @@ för inladdning
       <Ability
         title={"Ability-programmet"}
         paragraf={"En möjlighet när alla andra dörrar stängs"}
+        image={Heart}
+        description={"Icon of a heart"}
       ></Ability>
       <AboutPage> </AboutPage>
     </>
