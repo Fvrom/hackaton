@@ -10,7 +10,7 @@ import Mia from "../../assets/Mia.svg";
 import Moa from "../../assets/Moa.svg";
 import Robin from "../../assets/Robin.svg";
 import line from "../../assets/line.png";
-import yrgo from "../../assets/yrgologga.svg";
+import yrgo from "../../assets/yrgologga-sv.png";
 import rm from "../../assets/rmlogga.png";
 
 const AboutPage = () => {
@@ -24,7 +24,7 @@ const AboutPage = () => {
           <p>x</p> 
           <img src={rm} id="rm-logo"></img>
         </div>
-        
+
         <p>Mer text som förklarar att samt varför vi byggt detta?</p>
       </section>
       <section className="about-page">
