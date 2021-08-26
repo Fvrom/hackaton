@@ -5,3 +5,13 @@
   flex-wrap: wrap;
   margin: 2rem;
 }
+
+.collab-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.logos {
+  display: flex;
+  justify-content: space-around;
+}

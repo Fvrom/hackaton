@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./card.css";
+import "../../assets/fonts/Roboto-Regular.woff2";
 
 const Card = (props) => {
   return (
