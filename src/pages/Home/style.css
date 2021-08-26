@@ -1,3 +1,7 @@
+section {
+  width: 100vw;
+}
+
 .canvas_wrapper {
   display: flex;
   justify-content: center;
@@ -40,6 +44,11 @@
 }
 .loading_wrapper p {
   font-size: 2rem;
+  align-content: center;
+}
+.loading_wrapper img {
+  display: flex;
+  justify-content: center;
 }
 
 .presentation_wrapper {

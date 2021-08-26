@@ -74,7 +74,7 @@ för inladdning
   });
 
   return (
-    <>
+    <section>
       <div
         className="presentation_wrapper"
         style={{ visibility: isScrolled ? "hidden" : "visible" }}
@@ -129,7 +129,7 @@ för inladdning
         description={"Icon of a heart"}
       ></Ability>
       <AboutPage> </AboutPage>
-    </>
+    </section>
   );
 };
 
