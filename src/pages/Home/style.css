@@ -12,7 +12,7 @@
   margin-top: 10rem;
   margin-bottom: 10rem;
   width: 80vw;
-  height: 40vw;
+  height: calc(80vw * 9 / 16);
   background: white;
 }
 
