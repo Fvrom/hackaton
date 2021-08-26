@@ -16,7 +16,7 @@ const AboutPage = () => {
   return (
     <>
       <section className="collab-wrapper">
-        <img src={line} alt="line" />
+        <img src={line} alt="start av Om Oss-sektionen" />
 
         <div className="logos">
           <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
