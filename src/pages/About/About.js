@@ -9,8 +9,9 @@ import Mia from "../../assets/Mia.svg";
 import Moa from "../../assets/Moa.svg";
 import Robin from "../../assets/Robin.svg";
 import line from "../../assets/line.png";
-import yrgo from "../../assets/yrgologga.svg";
-import rm from "../../assets/rmlogoofc.png";
+
+import yrgo from "../../assets/yrgologga-sv.png";
+import rm from "../../assets/rmlogga.png";
 
 const AboutPage = () => {
   return (

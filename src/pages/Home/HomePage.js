@@ -141,7 +141,10 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         paragraf={"En möjlighet när alla andra dörrar stängts"}
         image={Heart}
         description={"Icon of a heart"}
-      ></Ability>
+      >
+        {" "}
+        {isClicked === true}
+      </Ability>
       <AboutPage> </AboutPage>
     </section>
   );
