@@ -28,11 +28,6 @@ const HomePage = () => {
 unityContext.send("Sphere", "ChangeName", "Robin");
 
 
-
-/*
-
-
-
 */
 
   const [isScrolled, setScroll] = useState(false);
@@ -80,9 +75,8 @@ unityContext.send("Sphere", "ChangeName", "Robin");
 
   unityContext.on("TheEnd", function (isClicked) {
     setIsClicked(true);
-    console.log("button has been clicked");
+
     window.scrollTo(0, 900);
-    motion();
   });
 
   return (
@@ -112,20 +106,53 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         className="loading_wrapper"
         style={{ visibility: isLoaded ? "hidden" : "visible" }}
       >
-        <motion.div transition={{ ease: "easeOut", duration: 1 }}>
+        <motion.div
+          className="img_container"
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <motion.div
-            animate={{ opacity: [0, 1, 0] }}
+            animate={{ opacity: [0, 0.5, 1, 0.5, 0] }}
             transition={{
-              ease: "linear",
+              ease: "easeOut",
               repeat: Infinity,
-              duration: 1.5,
+              duration: 2,
             }}
           >
             <img src={Heart} alt="heart"></img>
           </motion.div>
-          <p style={{ visibility: progression ? "hidden" : "visible" }}>
-            Laddar sidan...
-          </p>
+          <div className="loading_text">
+            <p style={{ visibility: progression ? "hidden" : "visible" }}>
+              Laddar sidan
+            </p>
+            <motion.span
+              className="dots_animation"
+              animate={{ opacity: [0, 1, 0, 1] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p>.</p>
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0, 1] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p> .</p>
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 0, 1, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p> .</p>
+            </motion.span>
+          </div>
         </motion.div>
       </div>
 
@@ -142,7 +169,6 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         image={Heart}
         description={"Icon of a heart"}
       >
-        {" "}
         {isClicked === true}
       </Ability>
       <AboutPage> </AboutPage>
