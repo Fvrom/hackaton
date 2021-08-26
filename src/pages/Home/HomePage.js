@@ -6,6 +6,7 @@ import AboutPage from "../About/About";
 
 import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
+import { HiChevronDown } from "react-icons/hi";
 import "./style.css";
 
 const HomePage = () => {
@@ -39,6 +40,19 @@ för inladdning
 
 */
 
+  const [isScrolled, setScroll] = useState(false);
+  /* 
+  useEffect(function () {
+    onscroll.apply("scroll", function (scrolling) {
+      setScroll(true);
+    });
+  }); */
+  window.addEventListener("scroll", function () {
+    if (this.scroll) {
+      setScroll(true);
+    }
+  });
+
   const [progression, setProgression] = useState(0);
 
   useEffect(function () {
@@ -62,10 +76,37 @@ för inladdning
   return (
     <>
       <div
+        className="presentation_wrapper"
+        style={{ visibility: isScrolled ? "hidden" : "visible" }}
+      >
+        <p>Scrolla för att navigera genom berättelselsen om Vanjo</p>
+        <motion.div
+          animate={{ y: [5, 25, 5] }}
+          transition={{
+            ease: "linear",
+            repeat: Infinity,
+            duration: 3,
+          }}
+        >
+          <HiChevronDown size={"5rem"} color={"#E07F48"}></HiChevronDown>
+        </motion.div>
+      </div>
+
+      <div
         className="loading_wrapper"
         style={{ visibility: isLoaded ? "hidden" : "visible" }}
       >
         <motion.div transition={{ ease: "easeOut", duration: 1 }}>
+          <motion.div
+            animate={{ opacity: [0, 1, 0] }}
+            transition={{
+              ease: "linear",
+              repeat: Infinity,
+              duration: 1.5,
+            }}
+          >
+            <img src={Heart} alt="heart"></img>
+          </motion.div>
           <p style={{ visibility: progression ? "hidden" : "visible" }}>
             Loading ...
           </p>
@@ -73,7 +114,7 @@ för inladdning
       </div>
 
       <div className="canvas_wrapper">
-        <motion.div transition={{ ease: "easeIn", duration: 2 }}>
+        <motion.div transition={{ ease: "easeIn", duration: 1 }}>
           <Unity className="unity_canvas" unityContext={unityContext} />
         </motion.div>
       </div>

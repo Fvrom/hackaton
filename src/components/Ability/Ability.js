@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { CgArrowLongRight } from "react-icons/cg";
+import { HiArrowRight } from "react-icons/hi";
 
 import "./style.css";
 
@@ -9,21 +9,24 @@ const Ability = (props) => {
     <div className="ability_wrapper">
       <h3>{props.title}</h3>
       <p>{props.paragraf}</p>
+
+      <img
+        className="heart_image"
+        src={props.image}
+        alt={props.description}
+      ></img>
       <div className="container">
-        <img
-          className="heart_image"
-          src={props.image}
-          alt={props.description}
-        ></img>
         <a href="https://raddningsmissionen.se/ability">
-          {" "}
-          Ta dig till programmet här{" "}
+          Ta dig till programmet här
           <motion.div
-            className="motion"
-            transition={{ ease: "easeIn", duration: 2 }}
+            animate={{ x: [5, 15, 5] }}
+            transition={{
+              ease: "linear",
+              repeat: Infinity,
+              duration: 4,
+            }}
           >
-            {" "}
-            <CgArrowLongRight />{" "}
+            <HiArrowRight style={{ color: "black" }} />
           </motion.div>
         </a>
       </div>

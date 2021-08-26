@@ -41,3 +41,17 @@
 .loading_wrapper p {
   font-size: 2rem;
 }
+
+.presentation_wrapper {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  color: #6c6b6b;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
