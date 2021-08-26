@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
-import Header from "../../components/Header/Header";
+//import Header from "../../components/Header/Header";
+import Ability from "../../components/Ability/Ability";
+
+import { motion } from "framer-motion";
 import "./style.css";
 
 const HomePage = () => {
@@ -38,33 +41,44 @@ för inladdning
 
   useEffect(function () {
     unityContext.on("progress", function (progression) {
-      setProgression(progression);
+      setTimeout(() => {
+        setProgression(progression);
+      }, 2000);
     });
   }, []);
 
-  const [isLoaded, setIsLoaded] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(function () {
-    unityContext.on("progress", function () {
-      setIsLoaded(1);
+    unityContext.on("loaded", function () {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 3000);
     });
   });
 
   return (
     <>
-      <Header> </Header>
+      <div
+        className="loading_wrapper"
+        style={{ visibility: isLoaded ? "hidden" : "visible" }}
+      >
+        <motion.div transition={{ ease: "easeOut", duration: 2 }}>
+          <p style={{ visibility: progression ? "hidden" : "visible" }}>
+            Loading ...
+          </p>
+        </motion.div>
+      </div>
 
       <div className="canvas_wrapper">
-        <p script={{ visibility: progression ? "visible" : "hidden" }}>
-          Loading {progression * 100} percent...
-        </p>
-
-        <Unity
-          script={{ visibility: isLoaded ? "visible" : "hidden" }}
-          className="fadeIn unity_canvas"
-          unityContext={unityContext}
-        />
+        <motion.div transition={{ ease: "easeIn", duration: 2 }}>
+          <Unity className="unity_canvas" unityContext={unityContext} />
+        </motion.div>
       </div>
+      <Ability
+        title={"Ability-programmet"}
+        paragraf={"En möjlighet när alla andra dörrar stängs"}
+      ></Ability>
     </>
   );
 };

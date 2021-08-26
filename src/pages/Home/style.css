@@ -1,6 +1,9 @@
 .canvas_wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 .unity_canvas {
@@ -23,4 +26,18 @@
 
 .fadeIn {
   animation: fadeIn 2s 3s both;
+}
+
+.loading_wrapper {
+  z-index: 1;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading_wrapper p {
+  font-size: 2rem;
 }

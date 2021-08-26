@@ -4,8 +4,8 @@ import Header from "./../components/Header/Header";
 const AboutPage = () => {
   return (
     <>
-      <Header></Header>
       <section>
+        <Header></Header>
         <p> hej </p>
       </section>
     </>
