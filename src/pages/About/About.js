@@ -10,7 +10,7 @@ import Moa from "../../assets/Moa.svg";
 import Robin from "../../assets/Robin.svg";
 import line from "../../assets/line.png";
 import yrgo from "../../assets/yrgologga.svg";
-import rm from "../../assets/rmlogga.png";
+import rm from "../../assets/rmlogoofc.png";
 
 const AboutPage = () => {
   return (
@@ -20,7 +20,7 @@ const AboutPage = () => {
 
         <div className="logos">
           <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
-          <p>x</p>
+          <p id="x">x</p>
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
 
@@ -45,7 +45,7 @@ const AboutPage = () => {
           image={Birk}
           alt="Birk Härkönen"
           title="Manusförfattare"
-          text="DETTA ÄR EXAKT 600 TECKEN. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa"
+          text="Jag går andra året på YRGO's utbildning för Manusförfattare och antog utmaningen att skapa samt bearbeta projektets narrativa del. Jag skrev även texten som i kombination med en form av bildspel förmedlar historien. Av naturliga skäl pågick större delen av mitt arbete under projektets början. Efter lite research om Räddningsmissionen och problematiken de arbetar med utvecklade jag en narrativ outline. En outline som senare skulle visa sig vara för stor för att faktiskt kunna användas. Kompromissen blev att texten behövde omstruktureras för att senare bli en del av den slutgiltiga presentationen."
         ></Card>
 
         <Card
