@@ -74,12 +74,16 @@ för inladdning
   });
 
   return (
-    <>
+    <section>
       <div
         className="presentation_wrapper"
         style={{ visibility: isScrolled ? "hidden" : "visible" }}
       >
-        <p>Scrolla för att navigera genom berättelselsen om Vanjo</p>
+        <motion.div transition={{ ease: "easeIn", duration: 3 }}>
+          <p className="fadeIn">
+            Scrolla för att navigera genom berättelsen om Vanjo
+          </p>
+        </motion.div>
         <motion.div
           animate={{ y: [5, 25, 5] }}
           transition={{
@@ -108,7 +112,7 @@ för inladdning
             <img src={Heart} alt="heart"></img>
           </motion.div>
           <p style={{ visibility: progression ? "hidden" : "visible" }}>
-            Loading ...
+            Laddar sidan...
           </p>
         </motion.div>
       </div>
@@ -120,12 +124,12 @@ för inladdning
       </div>
       <Ability
         title={"Ability-programmet"}
-        paragraf={"En möjlighet när alla andra dörrar stängs"}
+        paragraf={"En möjlighet när alla andra dörrar stängts"}
         image={Heart}
         description={"Icon of a heart"}
       ></Ability>
       <AboutPage> </AboutPage>
-    </>
+    </section>
   );
 };
 

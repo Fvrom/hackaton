@@ -1,5 +1,4 @@
 import React from "react";
-
 import Card from "../../components/Card/Card";
 import "./about.css";
 
@@ -17,12 +16,12 @@ const AboutPage = () => {
   return (
     <>
       <section className="collab-wrapper">
-        <img src={line}></img>
+        <img src={line} alt="line" />
 
         <div className="logos">
-          <img src={yrgo} id="yrgo-logo"></img>
-          <p>x</p> 
-          <img src={rm} id="rm-logo"></img>
+          <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
+          <p>x</p>
+          <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
 
         <p>Mer text som förklarar att samt varför vi byggt detta?</p>
