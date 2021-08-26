@@ -18,7 +18,7 @@ const AboutPage = () => {
     <>
       <section className="collab-wrapper">
         <img src={line} id="line" alt="start av Om Oss-sektionen" />
-        
+
         <div className="logos">
           <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
           <p id="x">&</p>
@@ -26,7 +26,7 @@ const AboutPage = () => {
         </div>
         <div className="collab-text">
           <p>
-            I år 2021 upplaga av YRGOs årliga tävling Sammanslaget samarbetade
+            I 2021 års upplaga av YRGOs årliga tävling Sammanslaget samarbetade
             utbildningarna Game Programmer, Game Artist, Manusförfattare,
             Webbutvecklare och UX Designer för att skapa en 'interaktiv digital
             berättelse åt kunden Räddningsmissionen. Nedan kan ni läsa om de
