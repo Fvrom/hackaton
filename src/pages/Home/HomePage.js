@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 //import Header from "../../components/Header/Header";
 import Ability from "../../components/Ability/Ability";
@@ -7,6 +7,7 @@ import AboutPage from "../About/About";
 import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
 import { HiChevronDown } from "react-icons/hi";
+import anime from "animejs/lib/anime.es.js";
 import "./style.css";
 
 const HomePage = () => {
@@ -26,13 +27,7 @@ const HomePage = () => {
 
 unityContext.send("Sphere", "ChangeName", "Robin");
 
-}*/
 
-  /*
-
-för inladdning
-
-- /
 
 /*
 
@@ -41,12 +36,7 @@ för inladdning
 */
 
   const [isScrolled, setScroll] = useState(false);
-  /* 
-  useEffect(function () {
-    onscroll.apply("scroll", function (scrolling) {
-      setScroll(true);
-    });
-  }); */
+
   window.addEventListener("scroll", function () {
     if (this.scroll) {
       setScroll(true);
@@ -71,6 +61,28 @@ för inladdning
         setIsLoaded(true);
       }, 3000);
     });
+  });
+
+  /*unityContext.on("ending" , function (TheEnd) {
+
+  })   */
+  const scrolling = useRef();
+  useEffect(() => {
+    anime({
+      targets: scrolling.current,
+      translateY: [-500, 0],
+      opacity: [0, 1],
+      easing: "easeInOutExpo",
+    });
+  }, []);
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  unityContext.on("TheEnd", function (isClicked) {
+    setIsClicked(true);
+    console.log("button has been clicked");
+    window.scrollTo(0, 900);
+    motion();
   });
 
   return (
@@ -122,12 +134,17 @@ för inladdning
           <Unity className="unity_canvas" unityContext={unityContext} />
         </motion.div>
       </div>
+
       <Ability
+        ref={scrolling}
         title={"Ability-programmet"}
         paragraf={"En möjlighet när alla andra dörrar stängts"}
         image={Heart}
         description={"Icon of a heart"}
-      ></Ability>
+      >
+        {" "}
+        {isClicked === true}
+      </Ability>
       <AboutPage> </AboutPage>
     </section>
   );

@@ -9,9 +9,30 @@
 .collab-wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.collab-wrapper img {
+  width: 16rem;
+  margin-bottom: 3rem;
 }
 
 .logos {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  font-family: "Roboto Regular";
+}
+
+#x {
+  font-size: 3rem;
+  font-family: "Roboto Regular";
+}
+
+#yrgo-logo {
+  width: 400px;
+}
+
+#rm-logo {
+  width: 730px;
+  height: auto;
 }
