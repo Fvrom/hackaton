@@ -21,16 +21,24 @@
 .heart_image {
   height: 80px;
   width: 80px;
+  margin-top: 8rem;
 }
 
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  margin-top: 5rem;
+  margin-top: 3rem;
+  width: 100%;
 }
 
 .container a {
-  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 20px;
   text-decoration: none;
+  width: 20rem;
 }
