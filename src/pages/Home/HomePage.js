@@ -7,6 +7,7 @@ import AboutPage from "../About/About";
 import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
 import { HiChevronDown } from "react-icons/hi";
+import { HiArrowRight } from "react-icons/hi";
 import anime from "animejs/lib/anime.es.js";
 import "./style.css";
 
@@ -28,20 +29,30 @@ const HomePage = () => {
 unityContext.send("Sphere", "ChangeName", "Robin");
 
 
-
-/*
-
-
-
 */
-
+  /* const [isDisabledScroll, setDisableScroll] = useState(false); */
+  /*
   const [isScrolled, setScroll] = useState(false);
+  //const countScroll = 0;
 
   window.addEventListener("scroll", function () {
     if (this.scroll) {
       setScroll(true);
+    } */
+  /* 
+    if (setScroll === true) {
+      setDisableScroll(true);
     }
-  });
+
+    // countScroll++
+  }); */
+  // overflow hidden
+
+  const [isButtonClicked, setButtonClicked] = useState(false);
+  /* 
+  useEffect(function (onClick) {
+    setButtonClicked(true);
+  }, []); */
 
   const [progression, setProgression] = useState(0);
 
@@ -80,16 +91,32 @@ unityContext.send("Sphere", "ChangeName", "Robin");
 
   unityContext.on("TheEnd", function (isClicked) {
     setIsClicked(true);
-    console.log("button has been clicked");
+
     window.scrollTo(0, 900);
-    motion();
   });
+
+  /* 
+  const { scrollYProgress } = useViewportScroll();
+  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1.5]); 
+  
+  */
+
+  /*
+handleScroll(element) {
+ /*  const target = event.target;
+
+  useEffect(() => {
+
+  }) 
+} */
 
   return (
     <section>
       <div
         className="presentation_wrapper"
-        style={{ visibility: isScrolled ? "hidden" : "visible" }}
+        style={{
+          visibility: isButtonClicked ? "hidden" : "visible",
+        }}
       >
         <motion.div transition={{ ease: "easeIn", duration: 3 }}>
           <p className="fadeIn">
@@ -106,26 +133,67 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         >
           <HiChevronDown size={"5rem"} color={"#E07F48"}></HiChevronDown>
         </motion.div>
+        <button
+          className="button_continue"
+          onClick={() => {
+            setButtonClicked(true);
+          }}
+        >
+          Klicka för att börja <HiArrowRight style={{ color: "black" }} />
+        </button>
       </div>
 
       <div
         className="loading_wrapper"
         style={{ visibility: isLoaded ? "hidden" : "visible" }}
       >
-        <motion.div transition={{ ease: "easeOut", duration: 1 }}>
+        <motion.div
+          className="img_container"
+          transition={{ ease: "easeOut", duration: 1 }}
+        >
           <motion.div
-            animate={{ opacity: [0, 1, 0] }}
+            animate={{ opacity: [0, 0.5, 1, 0.5, 0] }}
             transition={{
-              ease: "linear",
+              ease: "easeOut",
               repeat: Infinity,
-              duration: 1.5,
+              duration: 2,
             }}
           >
             <img src={Heart} alt="heart"></img>
           </motion.div>
-          <p style={{ visibility: progression ? "hidden" : "visible" }}>
-            Laddar sidan...
-          </p>
+          <div className="loading_text">
+            <p style={{ visibility: progression ? "hidden" : "visible" }}>
+              Laddar sidan
+            </p>
+            <motion.span
+              className="dots_animation"
+              animate={{ opacity: [0, 1, 0, 1] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p>.</p>
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 1, 0, 1] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p> .</p>
+            </motion.span>
+            <motion.span
+              animate={{ opacity: [0, 0, 1, 0] }}
+              transition={{
+                repeat: Infinity,
+                duration: 2,
+              }}
+            >
+              <p> .</p>
+            </motion.span>
+          </div>
         </motion.div>
       </div>
 
@@ -142,7 +210,6 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         image={Heart}
         description={"Icon of a heart"}
       >
-        {" "}
         {isClicked === true}
       </Ability>
       <AboutPage> </AboutPage>
