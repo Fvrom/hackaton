@@ -55,7 +55,7 @@ const AboutPage = () => {
           title="UX Designer"
           text="Som UX Designer har jag lett gruppens idégenerering i en digital workshop där vi använde oss av metoder som Affinity Mapping, Crazy 8 och Dot Voting. Det ledde oss till 5 starka byggstenar som representerade “Kärleken är större” för oss. Dessa ligger till grund för berättelsen. Jag har arbetat med hemsidans utseende i Figma och samarbetat med webbutveckling för att hitta bra lösningar som passar projektets längd och vår förmåga. Jag har gjort användartester för att utvärdera användarvänligheten och samarbetat med WU och GC genom att löpande komma med input där användarvänligheten är i fokus."
           contact="Kontakta mig:"
-          url="hej@gmail.com"
+          url="marlor1013@skola.goteborg.se"
         ></Card>
 
         <Card
@@ -87,8 +87,8 @@ const AboutPage = () => {
           title="Webbutvecklare"
           text="I projektet har vi webbutvecklare arbetat tillsammans med Mia från UX Designer för att få ihop hemsidans uppbyggnad och interaktioner, där användarvänligheten har varit i fokus.
            Mina huvudsakliga ansvarsområden därefter har varit att samarbeta med Game Programmer för att se till att berättelsen kommit ut på hemsidan med en snygg interaktiv upplevelse och implementerat animationer på sidan. Det har varit en intressant och rolig utmaning att få GP's byggstenar att kommunicera med webbens byggstenar."
-          contact="Kontakta mig:"
-          url="hej@gmail.com"
+          contact="Se mer på min Github:"
+          url="https://github.com/Fvrom"
         ></Card>
 
         <Card
