@@ -12,6 +12,7 @@ import line from "../../assets/line.png";
 
 import yrgolarge from "../../assets/yrgologga.svg";
 import rm from "../../assets/rmlogoofc1.svg";
+import heartlight from "../../assets/heart-light.svg";
 
 const AboutPage = () => {
   return (
@@ -21,7 +22,7 @@ const AboutPage = () => {
 
         <div className="logos">
           <img src={yrgolarge} id="yrgo-logo" alt="YRGOs logotyp" />
-          <p id="x">&</p>
+          <img src={heartlight} id="x" alt="älskar"/>
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
         <div className="collab-text">

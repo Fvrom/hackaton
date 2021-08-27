@@ -31,12 +31,11 @@
 }
 
 #x {
-  font-size: 3rem;
-  font-family: "Roboto Regular";
-  /* font-weight: 200; */
+  max-width: 8%;
 }
 
 #yrgo-logo {
+  padding-top: 2rem;
   min-width: 20%;
   max-width: 25%;
 }
