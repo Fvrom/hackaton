@@ -10,9 +10,9 @@ import Moa from "../../assets/Moa.svg";
 import Robin from "../../assets/Robin.svg";
 import line from "../../assets/line.png";
 
-import yrgo from "../../assets/yrgologga-sv.png";
-import rm from "../../assets/rmlogoofc.png";
-// blev något knas i git pull hoppas inget förstördes för dig
+import yrgolarge from "../../assets/yrgologga.svg";
+import rm from "../../assets/rmlogoofc1.svg";
+
 const AboutPage = () => {
   return (
     <>
@@ -20,7 +20,7 @@ const AboutPage = () => {
         <img src={line} id="line" alt="start av Om Oss-sektionen" />
 
         <div className="logos">
-          <img src={yrgo} id="yrgo-logo" alt="YRGOs logotyp" />
+          <img src={yrgolarge} id="yrgo-logo" alt="YRGOs logotyp" />
           <p id="x">&</p>
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
@@ -28,7 +28,7 @@ const AboutPage = () => {
           <p>
             I 2021 års upplaga av YRGOs årliga tävling Sammanslaget samarbetade
             utbildningarna Game Programmer, Game Artist, Manusförfattare,
-            Webbutvecklare och UX Designer för att skapa en 'interaktiv digital
+            Webbutvecklare och UX Designer för att skapa en interaktiv digital
             berättelse åt kunden Räddningsmissionen. Nedan kan ni läsa om de
             studenter som står bakom detta bidrag samt hur ni kan se mer av
             deras arbete och kontaktuppgifter
@@ -41,13 +41,17 @@ const AboutPage = () => {
           alt="Sandra Danielsson"
           title="Webbutvecklare"
           text="DETTA ÄR EXAKT 600 TECKEN. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa"
+          contact="Se mer på min Github:"
+          url="https://github.com/San-Dan"
         ></Card>
 
         <Card
           image={Mia}
           alt="Mia Lorén"
           title="UX Designer"
-          text="DETTA ÄR EXAKT 600 TECKEN. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa"
+          text="Som UX designer har jag lett gruppens idégenerering i en digital workshop där vi använde oss av metoder som Affinity mapping, Crazy 8 och Dot voting. Det ledde oss till 5 starka byggstenar som representerade “kärleken är större” för oss. Dessa ligger till grund för berättelsen.  Jag har arbetat med hemsidans utseende i Figma och samarbetat med webbutveckling för att hitta bra lösningar som passar projektets längd och vår förmåga. Jag har gjort användartest för att utvärdera användarvänligheten och samarbetat med WU och GC genom att löpande komma med input där användarvänligheten är i fokus."
+          contact="Kontakta mig:"
+          url="hej@gmail.com"
         ></Card>
 
         <Card
@@ -55,6 +59,8 @@ const AboutPage = () => {
           alt="Birk Härkönen"
           title="Manusförfattare"
           text="Jag går andra året på YRGO's utbildning för Manusförfattare och antog utmaningen att skapa samt bearbeta projektets narrativa del. Jag skrev även texten som i kombination med en form av bildspel förmedlar historien. Av naturliga skäl pågick större delen av mitt arbete under projektets början. Efter lite research om Räddningsmissionen och problematiken de arbetar med utvecklade jag en narrativ outline. En outline som senare skulle visa sig vara för stor för att faktiskt kunna användas. Kompromissen blev att texten behövde omstruktureras för att senare bli en del av den slutgiltiga presentationen."
+          contact="Kontakta mig:"
+          url="hej@gmail.com"
         ></Card>
 
         <Card
@@ -62,6 +68,8 @@ const AboutPage = () => {
           alt="Moa Hansen"
           title="Game Artist"
           text="Lorem ipsum dolor sit amet consectetur"
+          contact="Kontakta mig:"
+          url="hej@gmail.com"
         ></Card>
 
         <Card
@@ -69,6 +77,8 @@ const AboutPage = () => {
           alt="Ida From"
           title="Webbutvecklare"
           text="Lorem ipsum dolor sit amet consectetur"
+          contact="Kontakta mig:"
+          url="hej@gmail.com"
         ></Card>
 
         <Card
@@ -76,6 +86,8 @@ const AboutPage = () => {
           alt="Robin Bono"
           title="Game Programmer"
           text="Lorem ipsum dolor sit amet consectetur"
+          contact="Kontakta mig:"
+          url="hej@gmail.com"
         ></Card>
       </section>
     </>

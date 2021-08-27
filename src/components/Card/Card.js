@@ -11,8 +11,9 @@ const Card = (props) => {
         <div className="card-content">
           <h3>{props.title}</h3>
           <p>{props.text}</p>
-          {/* mailto:   */}
-          {/* <a href="mailto:".{props.email}>Kontakta mig</a> */}
+          
+          <p>{props.contact}</p>
+          <a href={props.url}>{props.url}</a>
         </div>
       </article>
     </section>
@@ -24,7 +25,8 @@ Card.propTypes = {
   name: PropTypes.string,
   title: PropTypes.string,
   text: PropTypes.string,
-  email: PropTypes.string,
+  contact: PropTypes.string,
+  url: PropTypes.string
 };
 
 export default Card;

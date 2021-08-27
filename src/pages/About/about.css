@@ -20,7 +20,7 @@
 
 #line {
   min-width: max-content;
-  max-width: 1600px;
+  max-width: 80%;
   margin-bottom: 3rem;
 }
 
@@ -37,12 +37,13 @@
 }
 
 #yrgo-logo {
-  min-width: 10rem;
+  min-width: 20%;
+  max-width: 25%;
 }
 
 #rm-logo {
-  /* width: 730px; */
-  min-width: 10rem;
-  max-width: 70rem;
-  height: auto;
+  min-width: 10%;
+  max-width: 65%;
+  /* height: auto; */
 }
+
