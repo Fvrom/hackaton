@@ -91,6 +91,15 @@ span .dots_animation {
   font-family: "Roboto Regular";
   margin-top: 8rem;
 }
+.button_continue_two {
+  margin-top: 0;
+  border: none;
+  background: white;
+}
+.button_continue_two {
+  cursor: pointer;
+}
+
 .button_continue:hover {
   font-size: 20px;
   cursor: pointer;
