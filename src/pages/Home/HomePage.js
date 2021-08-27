@@ -7,6 +7,7 @@ import AboutPage from "../About/About";
 import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
 import { HiChevronDown } from "react-icons/hi";
+import { HiArrowRight } from "react-icons/hi";
 import anime from "animejs/lib/anime.es.js";
 import "./style.css";
 
@@ -29,14 +30,29 @@ unityContext.send("Sphere", "ChangeName", "Robin");
 
 
 */
-
+  /* const [isDisabledScroll, setDisableScroll] = useState(false); */
+  /*
   const [isScrolled, setScroll] = useState(false);
+  //const countScroll = 0;
 
   window.addEventListener("scroll", function () {
     if (this.scroll) {
       setScroll(true);
+    } */
+  /* 
+    if (setScroll === true) {
+      setDisableScroll(true);
     }
-  });
+
+    // countScroll++
+  }); */
+  // overflow hidden
+
+  const [isButtonClicked, setButtonClicked] = useState(false);
+  /* 
+  useEffect(function (onClick) {
+    setButtonClicked(true);
+  }, []); */
 
   const [progression, setProgression] = useState(0);
 
@@ -79,11 +95,28 @@ unityContext.send("Sphere", "ChangeName", "Robin");
     window.scrollTo(0, 900);
   });
 
+  /* 
+  const { scrollYProgress } = useViewportScroll();
+  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1.5]); 
+  
+  */
+
+  /*
+handleScroll(element) {
+ /*  const target = event.target;
+
+  useEffect(() => {
+
+  }) 
+} */
+
   return (
     <section>
       <div
         className="presentation_wrapper"
-        style={{ visibility: isScrolled ? "hidden" : "visible" }}
+        style={{
+          visibility: isButtonClicked ? "hidden" : "visible",
+        }}
       >
         <motion.div transition={{ ease: "easeIn", duration: 3 }}>
           <p className="fadeIn">
@@ -100,6 +133,14 @@ unityContext.send("Sphere", "ChangeName", "Robin");
         >
           <HiChevronDown size={"5rem"} color={"#E07F48"}></HiChevronDown>
         </motion.div>
+        <button
+          className="button_continue"
+          onClick={() => {
+            setButtonClicked(true);
+          }}
+        >
+          Klicka för att börja <HiArrowRight style={{ color: "black" }} />
+        </button>
       </div>
 
       <div
