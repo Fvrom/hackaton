@@ -1,12 +1,14 @@
 import React from "react";
 import { motion } from "framer-motion";
 import arrow from "../../assets/right_arrow-min.png";
-
+import line from "../../assets/line.png";
+import "../../pages/About/about.css";
 import "./style.css";
 
 const Ability = (props) => {
   return (
     <div className="ability_wrapper">
+      <img src={line} id="line" alt="start av Om Oss-sektionen" />
       <h3>{props.title}</h3>
       <p>{props.paragraf}</p>
 
