@@ -28,6 +28,7 @@
 
 .fadeIn {
   animation: fadeIn 2s 3s both;
+  font-family: "Lota Grotesque";
 }
 
 .loading_wrapper {

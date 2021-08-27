@@ -5,9 +5,23 @@
 }
 
 .collab-text {
-  max-width: 80%;
+  max-width: 70%;
   font-size: 1.4rem;
   line-height: 2rem;
+  font-family: "Roboto Regular";
+}
+
+.project-headline {
+  font-size: 2rem;
+  line-height: 2rem;
+  /* align-self: center; */
+}
+.collab-text p {
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.collab-text a {
+  color:black;
 }
 
 #line {

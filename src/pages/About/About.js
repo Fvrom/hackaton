@@ -26,14 +26,16 @@ const AboutPage = () => {
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
         <div className="collab-text">
+          <h1 className="project-headline">Vi är HackAbility</h1>
           <p>
             I 2021 års upplaga av YRGOs årliga tävling Sammanslaget samarbetade
-            utbildningarna Game Programmer, Game Artist, Manusförfattare,
+            utbildningarna Game Creator Programmer, Game Creator Artist, Manusförfattare,
             Webbutvecklare och UX Designer för att skapa en interaktiv digital
             berättelse åt kunden Räddningsmissionen. Nedan kan ni läsa om de
             studenter som står bakom detta bidrag samt hur ni kan se mer av
-            deras arbete och kontaktuppgifter
+            deras arbete och kontakta dem.
           </p>
+          <a href="https://www.yrgo.se/">Läs mer om YRGOS utbildningar</a>
         </div>
       </section>
       <section className="about-page">
@@ -50,7 +52,7 @@ const AboutPage = () => {
           image={Mia}
           alt="Mia Lorén"
           title="UX Designer"
-          text="Som UX designer har jag lett gruppens idégenerering i en digital workshop där vi använde oss av metoder som Affinity mapping, Crazy 8 och Dot voting. Det ledde oss till 5 starka byggstenar som representerade “kärleken är större” för oss. Dessa ligger till grund för berättelsen.  Jag har arbetat med hemsidans utseende i Figma och samarbetat med webbutveckling för att hitta bra lösningar som passar projektets längd och vår förmåga. Jag har gjort användartest för att utvärdera användarvänligheten och samarbetat med WU och GC genom att löpande komma med input där användarvänligheten är i fokus."
+          text="Som UX Designer har jag lett gruppens idégenerering i en digital workshop där vi använde oss av metoder som Affinity Mapping, Crazy 8 och Dot Voting. Det ledde oss till 5 starka byggstenar som representerade “Kärleken är större” för oss. Dessa ligger till grund för berättelsen. Jag har arbetat med hemsidans utseende i Figma och samarbetat med webbutveckling för att hitta bra lösningar som passar projektets längd och vår förmåga. Jag har gjort användartester för att utvärdera användarvänligheten och samarbetat med WU och GC genom att löpande komma med input där användarvänligheten är i fokus."
           contact="Kontakta mig:"
           url="hej@gmail.com"
         ></Card>
@@ -61,23 +63,29 @@ const AboutPage = () => {
           title="Manusförfattare"
           text="Jag går andra året på YRGO's utbildning för Manusförfattare och antog utmaningen att skapa samt bearbeta projektets narrativa del. Jag skrev även texten som i kombination med en form av bildspel förmedlar historien. Av naturliga skäl pågick större delen av mitt arbete under projektets början. Efter lite research om Räddningsmissionen och problematiken de arbetar med utvecklade jag en narrativ outline. En outline som senare skulle visa sig vara för stor för att faktiskt kunna användas. Kompromissen blev att texten behövde omstruktureras för att senare bli en del av den slutgiltiga presentationen."
           contact="Kontakta mig:"
-          url="hej@gmail.com"
+          url="birk.1989@hotmail.com"
         ></Card>
 
         <Card
           image={Moa}
           alt="Moa Hansen"
           title="Game Artist"
-          text="Lorem ipsum dolor sit amet consectetur"
-          contact="Kontakta mig:"
-          url="hej@gmail.com"
+          text="Jag går andra året av Game Creator Artist på YRGO, och tog rollen som grafiker 
+          och ansvarade för hela projektets grafiska element och arbetade tillsammans med manusförfattaren för att 
+          kunna visualisera berättelsen han skrev. Det började med några konceptskisser av huvudkaraktären Vanjo, baserat 
+          på beskrivningen manusförfattaren gav mig, och efter detta en enkel storyboard för att kunna lista ut hur många 
+          bilder som behövdes och sedan färdigställa bilderna. Men då ingenting är satt i sten och fler ideér kan komma 
+         framemot slutet på ett projekt fick jag rita en extra bild och några knappar. Men iom vår starka grund blev det inga större problem för mig."
+          contact="Se fler av mina verk på Artstation:"
+          url="https://www.artstation.com/theleafcuter"
         ></Card>
 
         <Card
           image={Ida}
           alt="Ida From"
           title="Webbutvecklare"
-          text="Lorem ipsum dolor sit amet consectetur"
+          text="I projektet har vi webbutvecklare arbetat tillsammans med Mia från UX Designer för att få ihop hemsidans uppbyggnad och interaktioner, där användarvänligheten har varit i fokus.
+           Mina huvudsakliga ansvarsområden därefter har varit att samarbeta med Game Programmer för att se till att berättelsen kommit ut på hemsidan med en snygg interaktiv upplevelse och implementerat animationer på sidan. Det har varit en intressant och rolig utmaning att få GP's byggstenar att kommunicera med webbens byggstenar."
           contact="Kontakta mig:"
           url="hej@gmail.com"
         ></Card>
@@ -86,9 +94,13 @@ const AboutPage = () => {
           image={Robin}
           alt="Robin Bono"
           title="Game Programmer"
-          text="Lorem ipsum dolor sit amet consectetur"
-          contact="Kontakta mig:"
-          url="hej@gmail.com"
+          text="Målet med min uppgift var att implementera tillverkade delar från grafiker och manusförfattare, därefter utveckla en form av interaktivitet.
+          Som game programmer var det en utmaning att gå utanför ramarna för hur man vanligtvis tänker sig ett spel.
+          Men under den korta tiden vi hade på oss så tycker jag att vi tillsammans lyckades få ihop något bra.
+          Att få det interaktiva spelfönstret att kommunicera med webbsidan var något som jag verkligen tyckte var intressant.
+          Och det är även något jag gärna utforskar mer i framtiden!"
+          contact="Se mer på min portfolio:"
+          url="http://portfolio.omnick.se/"
         ></Card>
       </section>
     </>
