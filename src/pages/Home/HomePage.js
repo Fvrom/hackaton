@@ -7,7 +7,7 @@ import AboutPage from "../About/About";
 import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
 import { HiChevronDown } from "react-icons/hi";
-import { HiArrowRight } from "react-icons/hi";
+//import { HiArrowRight } from "react-icons/hi";
 import anime from "animejs/lib/anime.es.js";
 import "./style.css";
 
@@ -120,7 +120,8 @@ handleScroll(element) {
       >
         <motion.div transition={{ ease: "easeIn", duration: 3 }}>
           <p className="fadeIn">
-            Scrolla för att navigera genom berättelsen om Vanjo
+            Scrolla eller använd pilarna för att navigera genom berättelsen om
+            Vanjo
           </p>
         </motion.div>
         <motion.div
@@ -139,7 +140,7 @@ handleScroll(element) {
             setButtonClicked(true);
           }}
         >
-          Klicka för att börja <HiArrowRight style={{ color: "black" }} />
+          Klicka för att börja
         </button>
       </div>
 
@@ -212,7 +213,7 @@ handleScroll(element) {
       >
         {isClicked === true}
       </Ability>
-      <AboutPage> </AboutPage>
+      <AboutPage></AboutPage>
     </section>
   );
 };
