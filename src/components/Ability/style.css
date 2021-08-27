@@ -45,6 +45,10 @@
   margin-top: 1rem;
   margin-bottom: 5rem;
   font-size: 20px;
+  color: #686569;
   text-decoration: none;
   width: 20rem;
+}
+.container a:hover {
+  font-size: 23px;
 }
