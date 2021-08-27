@@ -26,9 +26,8 @@ const AboutPage = () => {
           <img src={rm} id="rm-logo" alt="Räddningsmissionens logotyp" />
         </div>
         <div className="collab-text">
-          <h1 className="project-headline">Vi är HackAbility</h1>
           <p>
-            I 2021 års upplaga av YRGOs årliga tävling Sammanslaget samarbetade
+            I 2021 års upplaga av YRGOs klassiska tävling Sammanslaget samarbetade
             utbildningarna Game Creator Programmer, Game Creator Artist, Manusförfattare,
             Webbutvecklare och UX Designer för att skapa en interaktiv digital
             berättelse åt kunden Räddningsmissionen. Nedan kan ni läsa om de
@@ -43,7 +42,9 @@ const AboutPage = () => {
           image={Sandra}
           alt="Sandra Danielsson"
           title="Webbutvecklare"
-          text="DETTA ÄR EXAKT 600 TECKEN. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa"
+          text="Vårt ansvarsområde som webbutvecklare har varit att användare ska kunna besöka en sida som snyggt och smidigt kunnat visa upp materialet skapat av Game Programmer samtidigt som vi implementerat god användarvänlighet. Vi valde att arbeta i ramverket React för att få fördjupa våra kunskaper inom det.
+          Starten av projektet innebar en del efterforskning kring att kombinera React och Unity men efter en del trial & error är vi nöjda med lösningen.
+          Efter den första tekniska uppstarten har jag huvudsakligen arbetat med att designa samt bygga denna presentationsdel, där jag bl a jobbat med components."
           contact="Se mer på min Github:"
           url="https://github.com/San-Dan"
         ></Card>
@@ -74,8 +75,8 @@ const AboutPage = () => {
           och ansvarade för hela projektets grafiska element och arbetade tillsammans med manusförfattaren för att 
           kunna visualisera berättelsen han skrev. Det började med några konceptskisser av huvudkaraktären Vanjo, baserat 
           på beskrivningen manusförfattaren gav mig, och efter detta en enkel storyboard för att kunna lista ut hur många 
-          bilder som behövdes och sedan färdigställa bilderna. Men då ingenting är satt i sten och fler ideér kan komma 
-         framemot slutet på ett projekt fick jag rita en extra bild och några knappar. Men iom vår starka grund blev det inga större problem för mig."
+          bilder som behövdes och sedan färdigställa bilderna. Men då ingenting är satt i sten och fler ideér alltid kan komma 
+         framemot slutet fick jag rita en extra bild och några knappar. Men iom vår starka grund blev det inga större problem."
           contact="Se fler av mina verk på Artstation:"
           url="https://www.artstation.com/theleafcuter"
         ></Card>
