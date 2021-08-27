@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import Unity, { UnityContext } from "react-unity-webgl";
 //import Header from "../../components/Header/Header";
 import Ability from "../../components/Ability/Ability";
@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 import Heart from "../../assets/Heart.svg";
 import { HiChevronDown } from "react-icons/hi";
 //import { HiArrowRight } from "react-icons/hi";
-import anime from "animejs/lib/anime.es.js";
+
 import "./style.css";
 
 const HomePage = () => {
@@ -22,37 +22,7 @@ const HomePage = () => {
     productVersion: "1.0",
   });
 
-  //function on(eventName: "loaded", eventListener: () => void): void;
-
-  /* function ChangeName() {
-
-unityContext.send("Sphere", "ChangeName", "Robin");
-
-
-*/
-  /* const [isDisabledScroll, setDisableScroll] = useState(false); */
-  /*
-  const [isScrolled, setScroll] = useState(false);
-  //const countScroll = 0;
-
-  window.addEventListener("scroll", function () {
-    if (this.scroll) {
-      setScroll(true);
-    } */
-  /* 
-    if (setScroll === true) {
-      setDisableScroll(true);
-    }
-
-    // countScroll++
-  }); */
-  // overflow hidden
-
   const [isButtonClicked, setButtonClicked] = useState(false);
-  /* 
-  useEffect(function (onClick) {
-    setButtonClicked(true);
-  }, []); */
 
   const [progression, setProgression] = useState(0);
 
@@ -74,19 +44,6 @@ unityContext.send("Sphere", "ChangeName", "Robin");
     });
   });
 
-  /*unityContext.on("ending" , function (TheEnd) {
-
-  })   */
-  const scrolling = useRef();
-  useEffect(() => {
-    anime({
-      targets: scrolling.current,
-      translateY: [-500, 0],
-      opacity: [0, 1],
-      easing: "easeInOutExpo",
-    });
-  }, []);
-
   const [isClicked, setIsClicked] = useState(false);
 
   unityContext.on("TheEnd", function (isClicked) {
@@ -94,21 +51,6 @@ unityContext.send("Sphere", "ChangeName", "Robin");
 
     window.scrollTo(0, 900);
   });
-
-  /* 
-  const { scrollYProgress } = useViewportScroll();
-  const scaleAnim = useTransform(scrollYProgress, [0, 0.5, 1], [1, 1, 1.5]); 
-  
-  */
-
-  /*
-handleScroll(element) {
- /*  const target = event.target;
-
-  useEffect(() => {
-
-  }) 
-} */
 
   return (
     <section>
@@ -119,7 +61,7 @@ handleScroll(element) {
         }}
       >
         <motion.div transition={{ ease: "easeIn", duration: 3 }}>
-          <p className="fadeIn">
+          <p>
             Scrolla eller använd pilarna för att navigera genom berättelsen om
             Vanjo
           </p>
@@ -205,7 +147,6 @@ handleScroll(element) {
       </div>
 
       <Ability
-        ref={scrolling}
         title={"Ability-programmet"}
         paragraf={"En möjlighet när alla andra dörrar stängts"}
         image={Heart}

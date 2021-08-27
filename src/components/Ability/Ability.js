@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HiArrowRight } from "react-icons/hi";
+import arrow from "../../assets/right_arrow-min.png";
 
 import "./style.css";
 
@@ -17,16 +17,16 @@ const Ability = (props) => {
       ></img>
       <div className="container">
         <a href="https://raddningsmissionen.se/ability">
-          Ta dig till programmet här
+          Läs mer om programmet här
           <motion.div
-            animate={{ x: [5, 15, 5] }}
+            animate={{ x: [8, 18, 8] }}
             transition={{
               ease: "linear",
               repeat: Infinity,
-              duration: 4,
+              duration: 3,
             }}
           >
-            <HiArrowRight style={{ color: "black" }} />
+            <img src={arrow} alt="arrow to the right"></img>
           </motion.div>
         </a>
       </div>
