@@ -75,7 +75,14 @@ const HomePage = () => {
             duration: 3,
           }}
         >
-          <HiChevronDown size={"5rem"} color={"#E07F48"}></HiChevronDown>
+          <button
+            className="button_continue_two"
+            onClick={() => {
+              setButtonClicked(true);
+            }}
+          >
+            <HiChevronDown size={"5rem"} color={"#E07F48"}></HiChevronDown>{" "}
+          </button>
         </motion.div>
         <button
           className="button_continue"
