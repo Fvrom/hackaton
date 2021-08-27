@@ -61,6 +61,7 @@ const HomePage = () => {
         }}
       >
         <motion.div transition={{ ease: "easeIn", duration: 3 }}>
+          <h1>Vanjos Resa</h1>
           <p>
             Scrolla eller använd pilarna för att navigera genom berättelsen om
             Vanjo
