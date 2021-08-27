@@ -80,3 +80,16 @@ div .loading_text {
 span .dots_animation {
   width: 5rem;
 }
+
+.button_continue {
+  border: none;
+  background: white;
+  font-size: 16px;
+  color: #6c6b6b;
+  font-family: "Roboto Regular";
+  margin-top: 8rem;
+}
+.button_continue:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
